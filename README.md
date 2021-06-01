@@ -14,13 +14,8 @@ brew install node@14
 
 ```
 npm install
+
 npm start
 ```
 
-## Docker
-
-#### Start docker locally
-
-```
-docker compose up
-```
+Then browse `localhost:3000` to play around.
