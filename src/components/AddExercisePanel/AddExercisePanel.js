@@ -11,13 +11,18 @@ export const AddExercisePanel = props => {
 
   const [ name, setName ] = useState('')
   const [ time, setTime ] = useState('0')
+  const [ error, setError ] = useState(false)
 
   return (
     <div className='exercise-panel-container'>
       <Input
-        label='Exercise name'
-        onChange={name => setName(name)}
+        label='Workout name'
+        onChange={name => {
+          setError(false)
+          setName(name.trim())
+        }}
         value={name}
+        hasError={error}
       />
       <Input
         label='Workout time (in seconds)'
@@ -25,6 +30,7 @@ export const AddExercisePanel = props => {
         type='number'
         value={time}
       />
+      {error && <span>{'Exercise name is required.'}</span>}
       <div className='button-container'>
         <Button
           label={'Go back'}
@@ -32,7 +38,10 @@ export const AddExercisePanel = props => {
         />
         <Button
           label='Add'
-          onClick={() => onCardAdd({ name: name || 'Workout', time })}
+          onClick={() => {
+            name && onCardAdd({ name, time })
+            !name && setError(true)
+          }}
         />
       </div>
     </div>

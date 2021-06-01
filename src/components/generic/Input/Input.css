@@ -10,6 +10,10 @@
     border: 1px solid #31a98c;
 }
 
+.workout-input.error {
+    border: 1px solid #da4553;
+}
+
 .input-container {
     display: flex;
     flex-direction: column;
