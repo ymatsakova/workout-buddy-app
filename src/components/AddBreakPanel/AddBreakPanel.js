@@ -12,7 +12,7 @@ export const AddBreakPanel = props => {
   return (
     <div className='time-break-panel-container'>
       <Input
-        label='Break between workouts'
+        label='Timeout (in seconds)'
         onChange={name => setTime(name)}
         value={time}
       />

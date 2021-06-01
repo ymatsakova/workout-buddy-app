@@ -77,7 +77,8 @@ export const ExerciseBuilderContainer = props => {
   const renderAddExerciseMode = () => {
     return (
       <div>
-        <h1>{'Enter your exercise name and time'}</h1>
+        <h1>{'What is your exercise?'}</h1>
+        <h2>{'Don\'t forget to enter workout time.'}</h2>
         <div className='builder-container'>
           <AddExercisePanel onCardAdd={handleCardAdd} onExit={() => setExerciseMode(false)} />
         </div>
@@ -88,7 +89,7 @@ export const ExerciseBuilderContainer = props => {
   const renderAddBreakMode = () => {
     return (
       <div>
-        <h1>{'Enter the time of your break'}</h1>
+        <h1>{'How long is your break going to be?'}</h1>
         <div className='builder-container'>
           <AddBreakPanel onBreakTimeAdd={handleAddBreak} onExit={() => setAddBreakMode(false)} />
         </div>
