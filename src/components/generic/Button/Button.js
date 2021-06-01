@@ -2,13 +2,18 @@ import './Button.css'
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
+
 
 export const Button = props => {
-  const { label, onClick } = props
+  const { classname, label, onClick } = props
 
   return (
     <button
-      className='workout-button'
+      className={classnames(
+        'workout-button',
+        classname
+      )}
       onClick={onClick}
     >
       {label}
@@ -16,7 +21,12 @@ export const Button = props => {
   )
 }
 
+Button.defaultProps = {
+  classname: ''
+}
+
 Button.propTypes = {
+  classname: PropTypes.string,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }

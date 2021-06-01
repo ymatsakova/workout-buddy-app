@@ -30,14 +30,11 @@ export const ExerciseContainer = props => {
             setCurrentCard(cards[currentCardIndex + 1])
           } else {
             setWorkoutDone(true)
-            clearInterval(intervalRef.current)
           }
-          clearInterval(intervalRef.current)
           return Number.parseInt(breakTime)
         } else {
           setBreak(false)
           setWorkout(true)
-          clearInterval(intervalRef.current)
           return Number.parseInt(currentCard.time)
         }
       }

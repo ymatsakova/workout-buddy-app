@@ -14,6 +14,7 @@ export const ExerciseBuilderContainer = props => {
     cards,
     onBreakAdd,
     onCardAdd,
+    onCardsDelete,
     showAddBreakButton,
     setWorkoutStart
   } = props
@@ -60,15 +61,22 @@ export const ExerciseBuilderContainer = props => {
             )}
             {hasCards && (
               <Button
-                label='Start'
-                onClick={() => setWorkoutStart(true)}
+                classname='ghost'
+                label='Remove all exercises'
+                onClick={onCardsDelete}
               />
             )}
           </div>
           {hasCards && (
-            <div className='card-container'>
-              {cards?.map((card, index) => <WorkoutCard card={card} key={index} />)}
-            </div>
+            <>
+              <div className='card-container'>
+                {cards?.map((card, index) => <WorkoutCard card={card} key={index} />)}
+              </div>
+              <Button
+                label='Start workout'
+                onClick={() => setWorkoutStart(true)}
+              />
+            </>
           )}
         </div>
       </>
@@ -112,6 +120,7 @@ ExerciseBuilderContainer.propTypes = {
     time: PropTypes.string
   })).isRequired,
   onBreakAdd: PropTypes.func.isRequired,
+  onCardsDelete: PropTypes.func.isRequired,
   onCardAdd: PropTypes.func.isRequired,
   showAddBreakButton: PropTypes.bool.isRequired,
   setWorkoutStart: PropTypes.func.isRequired

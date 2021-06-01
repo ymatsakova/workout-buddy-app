@@ -8,15 +8,19 @@ import { ExerciseContainer } from '../ExerciseContainer/ExerciseContainer'
 export const App = () => {
   const [ isWorkoutPage, setWorkoutPage ] = useState(false)
   const [ cards, setCards ] = useState([])
-  const [ breakTime, setBreakTime ] = useState(0)
+  const [ breakTime, setBreakTime ] = useState('0')
 
   return (
     <div className='workout-app'>
       {!isWorkoutPage && (
         <ExerciseBuilderContainer
           cards={cards}
-          showAddBreakButton={breakTime === 0}
+          showAddBreakButton={breakTime === '0'}
           onCardAdd={setCards}
+          onCardsDelete={() => {
+            setBreakTime(0)
+            setCards([])
+          }}
           onBreakAdd={setBreakTime}
           setWorkoutStart={setWorkoutPage}
         />
