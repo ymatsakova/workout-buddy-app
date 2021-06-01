@@ -1,0 +1,44 @@
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    margin-top: 36px;
+    border-top: 1px solid #aab2bd;
+    align-items: center;
+}
+
+.workout-countdown-card {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+}
+
+.workout-break,
+.workout-name,
+.workout-countdown {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.workout-break {
+    margin-bottom: 24px;
+}
+
+.workout-image {
+    width: 150px;
+    margin: 24px;
+}
+
+.exercise-container .button-container {
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+}
+
+.thank-you-container {
+    height: 150px;
+    align-items: center;
+    display: flex;
+}

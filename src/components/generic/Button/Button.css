@@ -1,0 +1,14 @@
+.workout-button {
+  width: 150px;
+  height: 40px;
+  background-color: #31a98c;
+  border: 1px solid #31a98c;
+  color: #ffffff;
+  font-size: inherit;
+  border-radius: 2px;
+}
+
+.workout-button:hover {
+  opacity: .7;
+  cursor: pointer;
+}

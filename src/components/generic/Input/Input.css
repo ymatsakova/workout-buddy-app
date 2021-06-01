@@ -1,0 +1,16 @@
+.workout-input {
+    margin-bottom: 24px;
+    margin-top: 12px;
+    height: 30px;
+    padding: 0 8px;
+    border: 1px solid #434a54;
+}
+
+.workout-input:hover {
+    border: 1px solid #31a98c;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}

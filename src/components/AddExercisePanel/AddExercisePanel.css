@@ -1,0 +1,10 @@
+.exercise-panel-container {
+    width: 100%;
+}
+
+.exercise-panel-container .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 36px;
+}

@@ -1,0 +1,9 @@
+.time-break-panel-container {
+    width: 100%;
+}
+
+.time-break-panel-container .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

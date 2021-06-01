@@ -1,0 +1,36 @@
+.builder-container {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    margin-top: 36px;
+    border-top: 1px solid #aab2bd;
+    align-items: center;
+}
+
+.builder-container.has-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.builder-container.has-cards .button-container {
+    justify-content: space-evenly;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    margin-bottom: 36px;
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    margin-top: 36px;
+    border-top: 1px solid #aab2bd;
+    flex-flow: wrap;
+    padding: 24px;
+}
