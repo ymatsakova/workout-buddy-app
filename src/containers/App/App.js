@@ -18,7 +18,7 @@ export const App = () => {
           showAddBreakButton={breakTime === '0'}
           onCardAdd={setCards}
           onCardsDelete={() => {
-            setBreakTime(0)
+            setBreakTime('0')
             setCards([])
           }}
           onBreakAdd={setBreakTime}
